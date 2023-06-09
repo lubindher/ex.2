@@ -25,25 +25,46 @@ The result is that combinational logic circuits have no feedback, and any change
 5.	For different input combinations, generate the timing diagram.
 
 ## Simplification:
+![image](https://github.com/Afsarjumail/ex.2/assets/118343395/e86f3f18-f922-4acc-a278-257739220945)
+
+
 
 ## Truth Table:
+![image](https://github.com/Afsarjumail/ex.2/assets/118343395/162d3876-12c0-4c31-8054-6979ce229fe8)
 
 ## Program:
-
-
+```
+module exp2a(a,b,c,d,f1,f2);
+input a,b,c,d;
+output f1,f2;
+wire adash,bdash,cdash,ddash,x,y,z,p,q,r;
+not(adash,a);
+not(bdash,b);
+not(cdash,c);
+not(ddash,d);
+and(x,bdash,ddash);
+and(y,adash,b,d);
+and(z,a,b,cdash);
+or(f1,x,y,z);
+and(p,cdash,d);
+and(q,a,c);
+and(r,b,c);
+or(f2,p,q,r);
+endmodule
+```
 ## RTL Schematic:
+![image](https://github.com/Afsarjumail/ex.2/assets/118343395/625b03e4-4b48-45b7-b6f7-f11663b9755c)
 
 
 
 
 ## Timing Diagram:
-
+![image](https://github.com/Afsarjumail/ex.2/assets/118343395/504f173d-9bdc-44e4-99fd-814e19e61328)
 
 
 
 ## Result:
 
 Thus the given Boolean functions are implemented in Verilog HDL and the truth table are verified.
-
 
 
